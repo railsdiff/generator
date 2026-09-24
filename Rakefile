@@ -82,6 +82,10 @@ def sed_commands(base_path) # rubocop:disable Metrics/MethodLength
       "#{base_path}/railsdiff/Gemfile"
     ],
     [
+      %{s/^ruby-.*$/your-ruby-version/},
+      "#{base_path}/railsdiff/.ruby-version"
+    ],
+    [
       's/.*/your-encrypted-credentials/',
       "#{base_path}/railsdiff/config/credentials.yml.enc"
     ],
